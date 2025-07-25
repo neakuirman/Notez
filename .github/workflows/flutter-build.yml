@@ -1,39 +1,37 @@
-name: Flutter CI
+name: Flutter Build
 
 on:
   push:
-    branches: [ "main" ]
+    branches: [main]
   pull_request:
-    branches: [ "main" ]
-  workflow_dispatch:
+    branches: [main]
 
 jobs:
-  build:
+  build-apk:
+    name: Build Flutter APK
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
+      - name: 🧾 Checkout repository
+        uses: actions/checkout@v3
 
-      - name: Set up Flutter
+      - name: 🐦 Install Flutter
         uses: subosito/flutter-action@v2
         with:
-          flutter-version: '3.32.6' # atau versi sesuai proyekmu
+          flutter-version: '3.19.6' # Ganti sesuai versi kamu
+          channel: stable
 
-      - name: Install dependencies
+      - name: 📦 Install dependencies
         run: flutter pub get
 
-      - name: Run analyzer
+      - name: 🧪 Analyze project (optional)
         run: flutter analyze
 
-      - name: Run tests
-        run: flutter test
+      - name: 🏗️ Build APK
+        run: flutter build apk --release
 
-      - name: Build APK
-        run: flutter build apk
-
-      - name: Upload APK
+      - name: 📤 Upload APK artifact
         uses: actions/upload-artifact@v4
         with:
-          name: app-release
+          name: release-apk
           path: build/app/outputs/flutter-apk/app-release.apk
