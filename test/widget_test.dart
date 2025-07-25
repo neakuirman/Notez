@@ -1,13 +1,14 @@
+import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-
-import 'package:notez/main.dart'; // Pastikan ini sesuai dengan lokasi main.dart kamu
+import 'package:notez/main.dart';
 
 void main() {
-  testWidgets('App smoke test', (WidgetTester tester) async {
-    // Build the app and trigger a frame.
+  testWidgets('UnderConstructionPage renders correctly', (WidgetTester tester) async {
     await tester.pumpWidget(const MyApp());
 
-    // Verify that a widget with expected text appears.
-    expect(find.text('Welcome'), findsOneWidget); // Ganti sesuai isi aplikasi kamu
+    expect(find.text('Notez'), findsOneWidget);
+    expect(find.textContaining('under development'), findsOneWidget);
+    expect(find.textContaining('Muhammad Anus Kugul'), findsOneWidget);
+    expect(find.textContaining('Irman'), findsOneWidget);
   });
 }
