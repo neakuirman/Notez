@@ -40,7 +40,7 @@ class UnderConstructionPage extends StatelessWidget {
               padding: EdgeInsets.all(24.0),
               child: Text(
                 '🚧 This app is currently under development.\n\n'
-                '👨‍💻 Developer: Muhammad Anus Kugul\n'
+                '👨‍💻 Developer: Muhammad Anus Gul\n'
                 '🎨 UI/UX Designer & Assistant Dev: Irman\n\n'
                 'Thank you for previewing our early version!',
                 textAlign: TextAlign.center,
