@@ -1,1 +1,0 @@
-Catatan hanya sebagai pengenal
