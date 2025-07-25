@@ -8,7 +8,7 @@ void main() {
 
     expect(find.text('Notez'), findsOneWidget);
     expect(find.textContaining('under development'), findsOneWidget);
-    expect(find.textContaining('Muhammad Anus Kugul'), findsOneWidget);
+    expect(find.textContaining('Muhammad Anus Gul'), findsOneWidget);
     expect(find.textContaining('Irman'), findsOneWidget);
   });
 }
