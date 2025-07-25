@@ -8,6 +8,6 @@ void main() {
     await tester.pumpWidget(const MyApp());
 
     // Verify that a widget with expected text appears.
-    expect(find.text('This Aplication is under development'), findsOneWidget); // Ganti sesuai isi aplikasi kamu
+    expect(find.text('Welcome'), findsOneWidget); // Ganti sesuai isi aplikasi kamu
   });
 }
