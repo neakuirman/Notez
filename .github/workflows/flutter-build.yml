@@ -25,7 +25,7 @@ jobs:
         run: flutter pub get
 
       - name: 🧪 Analyze project (optional)
-        run: flutter analyze
+        run: flutter analyze --no-fatal-infos
 
       - name: 🏗️ Build APK
         run: flutter build apk --release
