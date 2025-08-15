@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class UnderConstructionScreen extends StatelessWidget {
-  const UnderConstructionScreen({Key? key}) : super(key: key);
+  const UnderConstructionScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
