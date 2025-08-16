@@ -1,59 +1,38 @@
-import 'package:flutter/material.dart';
+import { Card, CardContent } from "@/components/ui/card"
 
-class UnderConstructionScreen extends StatelessWidget {
-  const UnderConstructionScreen({super.key});
+export default function UnderConstruction() {
+  return (
+    <div className="flex items-center justify-center h-screen bg-gray-100">
+      <Card className="p-8 rounded-2xl shadow-lg text-center max-w-md">
+        <CardContent className="flex flex-col items-center">
+          {/* Icon */}
+          <img 
+            src="/construction-icon.png" 
+            alt="Under Construction Icon" 
+            width={300} 
+            height={300} 
+            className="mb-6"
+          />
 
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      backgroundColor: Colors.white,
-      body: SafeArea(
-        child: Column(
-          children: [
-            // Logo di tengah
-            Expanded(
-              child: Center(
-                child: Image.asset(
-                  "assets/images/under_construction.png",
-                  width: 510, // fixed sesuai permintaan
-                  height: 510,
-                  fit: BoxFit.contain,
-                ),
-              ),
-            ),
+          {/* Under Construction */}
+          <h1 className="font-bold text-[22px] mb-2">
+            Under Construction
+          </h1>
+          
+          {/* Description */}
+          <p className="text-[22px] mb-8">
+            We&apos;re working hard to give you the best experience. Stay tuned!
+          </p>
 
-            // Teks di bagian bawah
-            Padding(
-              padding: const EdgeInsets.only(bottom: 32.0),
-              child: Column(
-                children: [
-                  Text(
-                    "Under Construction",
-                    style: TextStyle(
-                      fontSize: 28, // Heading sesuai teori UI/UX
-                      fontWeight: FontWeight.bold,
-                      color: Colors.black,
-                      height: 1.3,
-                    ),
-                    textAlign: TextAlign.center,
-                  ),
-                  const SizedBox(height: 8),
-                  Text(
-                    "We’re working hard to give you the best experience.\nStay tuned!",
-                    style: TextStyle(
-                      fontSize: 16, // Subheading
-                      fontWeight: FontWeight.w500,
-                      color: Colors.grey[700],
-                      height: 1.4,
-                    ),
-                    textAlign: TextAlign.center,
-                  ),
-                ],
-              ),
-            ),
-          ],
-        ),
-      ),
-    );
-  }
+          {/* Developer */}
+          <p className="font-bold text-[14px]">Developer</p>
+          <p className="text-[14px] mb-4">Muhammad Anus Gul</p>
+
+          {/* UI/UX */}
+          <p className="font-bold text-[14px]">UI/UX</p>
+          <p className="text-[14px]">Irman</p>
+        </CardContent>
+      </Card>
+    </div>
+  )
 }
