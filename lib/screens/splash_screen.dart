@@ -50,10 +50,10 @@ class _SplashScreenState extends State<SplashScreen>
           opacity: _fade, // efek fade in/out
           child: LayoutBuilder(
             builder: (context, constraints) {
-              // Ukuran logo responsif: ~50% sisi terpendek, dibatasi 160–320 px
+              // Ukuran logo responsif: ~50% sisi terpendek, dibatasi 160–220 px
               final shortest = constraints.biggest.shortestSide;
               final double dim =
-                  math.min(320.0, math.max(160.0, shortest * 0.5));
+                  math.min(220.0, math.max(160.0, shortest * 0.5));
 
               return Image.asset(
                 'assets/images/logo.png', // pastikan path ini benar
