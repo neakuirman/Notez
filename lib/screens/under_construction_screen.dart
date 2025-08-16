@@ -22,8 +22,8 @@ class UnderConstructionScreen extends StatelessWidget {
                 // Icon
                 Image.asset(
                   'assets/images/under_construction.png',
-                  width: 300,
-                  height: 300,
+                  width: 250,
+                  height: 250,
                   fit: BoxFit.contain,
                 ),
                 const SizedBox(height: 20),
@@ -43,7 +43,7 @@ class UnderConstructionScreen extends StatelessWidget {
                 const Text(
                   "We're working hard to give you the best experience. Stay tuned!",
                   style: TextStyle(
-                    fontSize: 22,
+                    fontSize: 18,
                   ),
                   textAlign: TextAlign.center,
                 ),
