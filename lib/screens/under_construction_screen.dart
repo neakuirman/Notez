@@ -6,43 +6,52 @@ class UnderConstructionScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      // Gunakan Container dengan BoxDecoration untuk gradient
-      body: Container(
-        decoration: const BoxDecoration(
-          gradient: LinearGradient(
-            begin: Alignment.topLeft,
-            end: Alignment.bottomRight,
-            colors: [
-              Color(0xFFFFE729), // Warna pertama
-              Color(0xFFFFCC00), // Warna kedua
-            ],
-          ),
-        ),
-        child: Center(
-          child: Padding(
-            padding: EdgeInsets.all(24.0),
-            child: Card(
-              elevation: 4,
-              shape: RoundedRectangleBorder(
-                borderRadius: BorderRadius.all(Radius.circular(16)),
-              ),
-              color: Colors.white,
-              child: Padding(
-                padding: EdgeInsets.all(20.0),
-                child: Text(
-                  '🚧 This app is currently under development.\n\n'
-                  '👨‍💻 Developer: Muhammad Anus Gul\n'
-                  '🎨 UI/UX Designer & Assistant Dev: Irman\n\n'
-                  'Thank you for previewing our early version!',
-                  textAlign: TextAlign.center,
-                  style: TextStyle(
-                    fontSize: 16,
-                    height: 1.5,
-                  ),
+      backgroundColor: Colors.white,
+      body: SafeArea(
+        child: Column(
+          children: [
+            // Logo di tengah
+            Expanded(
+              child: Center(
+                child: Image.asset(
+                  "assets/images/under_construction.png",
+                  width: 510, // fixed sesuai permintaan
+                  height: 510,
+                  fit: BoxFit.contain,
                 ),
               ),
             ),
-          ),
+
+            // Teks di bagian bawah
+            Padding(
+              padding: const EdgeInsets.only(bottom: 32.0),
+              child: Column(
+                children: [
+                  Text(
+                    "Under Construction",
+                    style: TextStyle(
+                      fontSize: 28, // Heading sesuai teori UI/UX
+                      fontWeight: FontWeight.bold,
+                      color: Colors.black,
+                      height: 1.3,
+                    ),
+                    textAlign: TextAlign.center,
+                  ),
+                  const SizedBox(height: 8),
+                  Text(
+                    "We’re working hard to give you the best experience.\nStay tuned!",
+                    style: TextStyle(
+                      fontSize: 16, // Subheading
+                      fontWeight: FontWeight.w500,
+                      color: Colors.grey[700],
+                      height: 1.4,
+                    ),
+                    textAlign: TextAlign.center,
+                  ),
+                ],
+              ),
+            ),
+          ],
         ),
       ),
     );
