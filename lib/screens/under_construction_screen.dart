@@ -21,7 +21,7 @@ class UnderConstructionScreen extends StatelessWidget {
               children: [
                 // Icon
                 Image.asset(
-                  'assets/images/construction-icon.png',
+                  'assets/images/under_construction.png',
                   width: 300,
                   height: 300,
                   fit: BoxFit.contain,
