@@ -25,7 +25,11 @@ class _SplashScreenState extends State<SplashScreen>
     // Tahan 2 detik, lalu fade-out singkat dan navigasi
     Future.delayed(const Duration(seconds: 2), () async {
       if (!mounted) return;
-      await _fadeCtrl.reverse(duration: const Duration(milliseconds: 250));
+
+      // set durasi reverse lebih cepat
+      _fadeCtrl.duration = const Duration(milliseconds: 250);
+      await _fadeCtrl.reverse();
+
       if (!mounted) return;
       Navigator.pushReplacementNamed(context, '/under-construction');
     });
