@@ -1,46 +1,89 @@
-import { Card, CardContent } from "@/components/ui/card"
+import 'package:flutter/material.dart';
 
-export default function UnderConstruction() {
-  return (
-    <div className="flex items-center justify-center h-screen bg-gray-100">
-      <Card className="p-8 rounded-2xl shadow-lg text-center max-w-md">
-        <CardContent className="flex flex-col items-center">
-          {/* Icon */}
-          <img 
-            src="/construction-icon.png" 
-            alt="Under Construction Icon" 
-            width={200} 
-            height={200} 
-            className="mb-6"
-          />
+class UnderConstructionScreen extends StatelessWidget {
+  const UnderConstructionScreen({super.key});
 
-          {/* Title */}
-          <h1 className="font-bold text-2xl mb-3">
-            Under Construction
-          </h1>
-          
-          {/* Description */}
-          <p className="text-gray-600 text-base mb-8">
-            We&apos;re working hard to give you the best experience. <br />
-            Please stay tuned!
-          </p>
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      backgroundColor: Colors.grey[100],
+      body: Center(
+        child: Card(
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(20),
+          ),
+          elevation: 6,
+          margin: const EdgeInsets.all(24),
+          child: Padding(
+            padding: const EdgeInsets.all(24),
+            child: Column(
+              mainAxisSize: MainAxisSize.min,
+              children: [
+                // Icon
+                Image.asset(
+                  'assets/images/construction-icon.png',
+                  width: 300,
+                  height: 300,
+                  fit: BoxFit.contain,
+                ),
+                const SizedBox(height: 20),
 
-          {/* Divider */}
-          <div className="w-full border-t border-gray-200 my-4" />
+                // Title
+                const Text(
+                  'Under Construction',
+                  style: TextStyle(
+                    fontSize: 22,
+                    fontWeight: FontWeight.bold,
+                  ),
+                  textAlign: TextAlign.center,
+                ),
+                const SizedBox(height: 12),
 
-          {/* Developer */}
-          <div className="mb-3">
-            <p className="font-semibold text-sm">Developer</p>
-            <p className="text-sm text-gray-700">Muhammad Anus Gul</p>
-          </div>
+                // Description
+                const Text(
+                  "We're working hard to give you the best experience. Stay tuned!",
+                  style: TextStyle(
+                    fontSize: 22,
+                  ),
+                  textAlign: TextAlign.center,
+                ),
+                const SizedBox(height: 28),
 
-          {/* UI/UX */}
-          <div>
-            <p className="font-semibold text-sm">UI/UX</p>
-            <p className="text-sm text-gray-700">Irman</p>
-          </div>
-        </CardContent>
-      </Card>
-    </div>
-  )
+                // Developer
+                const Text(
+                  "Developer",
+                  style: TextStyle(
+                    fontSize: 14,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+                const Text(
+                  "Muhammad Anus Gul",
+                  style: TextStyle(
+                    fontSize: 14,
+                  ),
+                ),
+                const SizedBox(height: 16),
+
+                // UI/UX
+                const Text(
+                  "UI/UX",
+                  style: TextStyle(
+                    fontSize: 14,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+                const Text(
+                  "Irman",
+                  style: TextStyle(
+                    fontSize: 14,
+                  ),
+                ),
+              ],
+            ),
+          ),
+        ),
+      ),
+    );
+  }
 }
